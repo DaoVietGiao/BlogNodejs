@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Posts</title>
+    <link rel="stylesheet" href="css/managePosts.css">
+</head>
+<body>
+    <header>
+        <h1>BLOG</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Trang chủ</a></li>
+            <li><a href="/published">Published</a></li>
+            <li><a href="/draft">Draft</a></li>
+            <li><a href="/planned">Planned</a></li>
+            <li><a href="/deleted">Deleted</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="top-bar">
+            <button id="createPost">Create a New Post</button>
+            <input type="text" placeholder="Search by title" id="searchTitle">
+        </div>
+        <div id="postList" class="post-list"></div>
+    </main>
+    <script src="js/managePosts.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Trang Chủ</a></li>
+                <li><a href="#" id="login">Đăng Nhập</a></li>
+                <li><a href="#" id="register">Đăng Ký</a></li>
+                <li><a href="/managePosts.html" id="manage" style="display: none;">Quản Lí Bài Đăng</a></li>
+                <li id="userDisplay" style="display: none;">
+                    <span id="loggedInUser" class="user-info"></span>
+                    <button id="logout" class="btn-logout" style="display: none;">Đăng xuất</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Latest Posts</h1>
+        <div id="posts-container">
+            <!-- Posts will be displayed here -->
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Blog. All rights reserved.</p>
+    </footer>
+
+    <!-- Popup Đăng nhập -->
+    <div id="loginFormPopup" class="popup">
+        <form class="form" id="loginForm" method="post">
+            <h2>Đăng nhập</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Login</button>
+            <button type="button" onclick="closeLoginForm()">Close</button>
+        </form>
+    </div>
+
+    <!-- Popup Đăng ký -->
+    <div id="registerFormPopup" class="popup">
+        <form class="form" id="registerForm" method="post">
+            <h2>Đăng Ký</h2>
+            <label for="reg_username">Username:</label>
+            <input type="text" id="reg_username" name="username">
+            <label for="reg_email">Email:</label>
+            <input type="email" id="reg_email" name="email">
+            <label for="reg_password">Password:</label>
+            <input type="password" id="reg_password" name="password">
+            <button type="submit">Register</button>
+            <button type="button" onclick="closeRegisterForm()">Close</button>
+        </form>
+    </div>
+
+    <script src="js/postScript.js"></script>
+    <script src="js/loginScript.js"></script>
+    <script src="js/logoutScript.js"></script>
+    <script src="js/registerScript.js"></script>
+</body>
+</html>
